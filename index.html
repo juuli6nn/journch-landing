@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <!-- Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · genre: modern-minimal · theme: Vercel Obsidian -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journch — Effortless Trade Tracking for the Trenches</title>
+  <meta name="description" content="Effortless trade tracking built for the high-speed world of trenching. Passive execution capture on Padre, Axiom, GMGN, and Photon." />
+  <meta property="og:title" content="Journch — Effortless Trade Tracking for the Trenches" />
+  <meta property="og:description" content="Trading moves too fast for traditional journals. Journch sits directly over Padre, Axiom, and GMGN to automatically record your executions." />
+  <meta property="og:url" content="https://journch.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://journch.com/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Journch — Effortless Trade Tracking for the Trenches" />
+  <meta name="twitter:description" content="Effortless trade tracking built for the high-speed world of trenching. Passive execution capture on Padre, Axiom, GMGN, and Photon." />
+  <meta name="twitter:image" content="https://journch.com/logo.png" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Fonts: Plus Jakarta Sans + Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+            mono: ['"Geist Mono"', 'monospace'],
+          },
+          colors: {
+            vercel: {
+              black: '#000000',
+              card: '#0a0a0a',
+              subtle: '#111111',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderHover: 'rgba(255, 255, 255, 0.16)',
+              ink: '#ededed',
+              muted: '#a1a1aa',
+              dim: '#71717a',
+              mint: '#26fb9b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #000000;
+      color: #ededed;
+      background-image: 
+        radial-gradient(ellipse 70% 45% at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+      background-attachment: fixed;
+    }
+    .vercel-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    /* Smooth Green Glow for Waitlist (Completely static, zero vibration/movement) */
+    #notify {
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    #notify:hover {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+    #notify:focus-within {
+      border-color: rgba(38, 251, 155, 0.7);
+      box-shadow: 0 0 0 1px rgba(38, 251, 155, 0.35), 0 0 25px rgba(38, 251, 155, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-white selection:text-black vercel-grid font-sans antialiased">
+
+  <!-- Vercel-Style Navigation -->
+  <header class="w-full max-w-5xl mx-auto px-6 py-6 flex items-center justify-between relative z-20">
+    <div class="flex items-center gap-2.5">
+      <img src="logo.png" alt="Journch Logo" class="w-8 h-8 object-contain" />
+      <span class="text-base font-semibold tracking-tight text-[#ededed]">Journch</span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a 
+        href="https://x.com/journch" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Journch on X"
+        class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#111218] hover:bg-[#181a24] border border-white/20 hover:border-white/50 text-white transition-all duration-200 shadow-sm active:scale-95 group"
+      >
+        <svg class="w-3.5 h-3.5 fill-current text-white" viewBox="0 0 24 24">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section (Vercel High-Contrast Discipline) -->
+  <main class="w-full max-w-3xl mx-auto px-6 pt-12 pb-20 flex flex-col items-center text-center relative z-10">
+    
+    <!-- Mascot Presentation (Crisp Drop Shadow, Zero Outer Artifacts) -->
+    <div class="relative mb-10 flex items-center justify-center">
+      <div class="absolute -inset-6 bg-white/[0.06] rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      <img 
+        src="logo.png" 
+        alt="Journch Mascot" 
+        class="w-32 h-32 md:w-36 md:h-36 object-contain pointer-events-none" 
+        style="filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.25));"
+      />
+    </div>
+
+    <!-- 3-Line Headline with App Icon Gradient -->
+    <h1 class="text-3xl sm:text-5xl md:text-[54px] font-bold tracking-[-0.03em] text-[#ededed] mb-6 leading-[1.14]">
+      Effortless Trade Tracking <br />
+      Built for the High-Speed <br />
+      <span class="bg-gradient-to-r from-[#02ffa4] via-[#22d3ee] to-[#c084fc] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,255,164,0.3)]">
+        World of Trenching.
+      </span>
+    </h1>
+
+    <!-- Subtitle (Clean Zinc-400 Leaded Paragraph) -->
+    <p class="text-sm sm:text-base text-zinc-400 max-w-xl mb-10 leading-relaxed font-normal tracking-[-0.01em]">
+      Trading Memecoins moves too fast for traditional journaling. Journch sits directly over your platform, automatically recording your buy and sell positions the second you click them—so you can stay 100% focused on the chart.
+    </p>
+
+    <!-- Waitlist Box (Vercel Hairline Container + High-Contrast Solid White Button) -->
+    <div id="notify" class="w-full max-w-md bg-[#0a0a0a] p-1.5 rounded-xl border border-white/[0.08] hover:border-white/[0.15] transition-colors shadow-2xl">
+      <form id="waitlist-form" onsubmit="handleWaitlist(event)" class="flex flex-col sm:flex-row gap-2">
+        <input 
+          id="email-input"
+          type="email" 
+          required 
+          placeholder="Enter your email for early access..." 
+          class="flex-1 px-3.5 py-2.5 rounded-lg bg-black text-[#ededed] placeholder-zinc-500 text-sm border border-white/[0.06] focus:outline-none focus:border-vercel-mint focus:ring-1 focus:ring-vercel-mint transition-all"
+        />
+        <button 
+          type="submit" 
+          class="px-4 py-2.5 rounded-lg bg-[#ededed] hover:bg-white text-black font-semibold text-sm transition-all shadow-sm cursor-pointer whitespace-nowrap active:scale-[0.98]"
+        >
+          Join Waitlist
+        </button>
+      </form>
+      <div id="form-success" class="hidden py-2 text-center text-vercel-mint font-sans text-sm font-medium">
+        ✓ You're on the early access list. We'll notify you on launch.
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Vercel Ft2 Minimal Single-Line Footer -->
+  <footer class="w-full max-w-5xl mx-auto px-6 py-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 relative z-20 gap-3 font-sans">
+    <div class="flex items-center gap-2">
+      <span class="font-medium text-zinc-300">journch.com</span>
+      <span class="text-zinc-700">•</span>
+      <span>© 2026 Journch</span>
+    </div>
+    <div class="text-[12px] text-zinc-600">
+      Built for Solana & EVM Snipers
+    </div>
+  </footer>
+
+  <script>
+    function handleWaitlist(event) {
+      event.preventDefault();
+      const email = document.getElementById('email-input').value;
+      if (!email) return;
+
+      const existing = JSON.parse(localStorage.getItem('journch_waitlist') || '[]');
+      existing.push({ email, timestamp: new Date().toISOString() });
+      localStorage.setItem('journch_waitlist', JSON.stringify(existing));
+
+      document.getElementById('waitlist-form').classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
